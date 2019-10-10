@@ -1,8 +1,29 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby starter`,
+     description: `A starter theme for Gatsby`,
+     author: `TCN`,
+     menuLinks:[
+        {
+          name:'home',
+          link:'/'
+        },
+        {
+          name:'blog',
+          link:'/blog'
+
+        },
+        {
+          name:'about',
+          link:'/about'
+
+        },
+        {
+          name:'contact',
+          link:'/contact'
+
+        }
+      ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,8 +34,33 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+   
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+          plugins: [
+               'gatsby-remark-relative-images',
+               {
+                    resolve: 'gatsby-remark-images',
+                    options: {
+                        maxWidth: 960,
+                        linkImagesToOriginal: false
+                    }
+               }
+          ]
+      }
+    },
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    `gatsby-theme-material-ui`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
