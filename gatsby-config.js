@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby starter`,
-     description: `A starter theme for Gatsby`,
+    title: `Øreåsen borettslag`,
+     description: `et godt sted å bo`,
      author: `TCN`,
      menuLinks:[
         {
-          name:'home',
+          name:'Hjem',
           link:'/'
         },
         {
@@ -14,12 +14,12 @@ module.exports = {
 
         },
         {
-          name:'about',
+          name:'om',
           link:'/about'
 
         },
         {
-          name:'contact',
+          name:'kontakt',
           link:'/contact'
 
         }

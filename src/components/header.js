@@ -5,7 +5,7 @@ import React from "react"
 import headerStyles from './header.module.scss'
 
 
-const Header = ({ siteTitle, menuLinks }) => (
+const Header = ({ siteTitle, menuLinks, description}) => (
   <header
     style={{
       background: `beige`,
